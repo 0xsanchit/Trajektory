@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewDoubtActivity"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:layout_margin="15dp"
+        android:id="@+id/view_doubt_title">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/view_doubt_title"
+        android:id="@+id/view_doubt_description">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/view_doubt_description"
+        android:id="@+id/view_doubt_status">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_doubt_status"
+        android:id="@+id/view_doubt_images"
+        android:layout_above="@id/view_doubt_takeup"
+        android:layout_margin="15dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_doubt_takeup"
+        android:layout_above="@id/view_doubt_followup"
+        android:layout_margin="15dp"
+        android:text="Take Up"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/view_doubt_followup"
+        android:layout_margin="15dp"
+        android:text="Solve / Follow up"></Button>
+
+
+</RelativeLayout>

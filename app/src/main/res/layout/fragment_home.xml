@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jeemain_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.5"
+    android:background="@drawable/mainbackground"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+  >
+
+
+
+        <ImageButton
+            android:id="@+id/logo"
+            android:layout_alignParentTop="true"
+            android:layout_width="200dp"
+            android:foregroundGravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_height="125dp"
+            android:layout_margin="15dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/logo" />
+
+
+
+    <ImageButton
+        android:id="@+id/physics"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logo"
+        android:layout_height="125dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/physics" />
+
+    <ImageButton
+        android:id="@+id/chemistry"
+        android:layout_below="@+id/physics"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="125dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        app:srcCompat="@drawable/chemistry" />
+
+    <ImageButton
+        android:id="@+id/maths"
+        android:layout_width="300dp"
+        android:layout_below="@+id/chemistry"
+        android:layout_centerHorizontal="true"
+        android:layout_height="125dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/maths" />
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_notes"
+        ads:layout_constraintTop_toBottomOf="@+id/maths"></com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>

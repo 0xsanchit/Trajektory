@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.5"
+    android:background="@drawable/mainbackground"
+>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewchemistry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_chemistry"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/book_solution1" />
+
+    <ImageView
+        android:id="@+id/logo1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="70dp"
+        ads:layout_constraintBottom_toTopOf="@+id/formula_list1"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        ads:srcCompat="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/formula_list1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        ads:layout_constraintBottom_toTopOf="@+id/summary1"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/logo1"
+        ads:srcCompat="@drawable/formula_list" />
+
+    <ImageButton
+        android:id="@+id/summary1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        ads:layout_constraintBottom_toTopOf="@+id/book_solution1"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/formula_list1"
+        ads:srcCompat="@drawable/summary" />
+
+    <ImageButton
+        android:id="@+id/book_solution1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        ads:layout_constraintBottom_toTopOf="@+id/adViewchemistry"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/summary1"
+        ads:srcCompat="@drawable/book_solutions" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

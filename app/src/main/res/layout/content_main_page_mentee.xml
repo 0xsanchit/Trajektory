@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainPageMentee"
+    tools:showIn="@layout/app_bar_main_page_mentee"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/logo_main"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape"
+        android:id="@+id/Mentor_display_layout"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/mentor_image"
+            android:layout_margin="10dp"
+            android:src="@drawable/profile_image"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mentor_name"
+            android:textSize="25sp"
+            style="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/Mentor_display_layout"
+        android:background="@drawable/shape"
+        android:text="Greetings from Trajektory,
+Here we provide one of our mentors personally assigned to you. You can interact with him in the chat above. He will be available to help you out with any kind of issues you might be facing. Head over to the chat to get started. We are glad to have you onboard."
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adViewMentee"
+        android:textSize="10sp"
+        android:layout_margin="10dp"
+        android:text="Disclaimer : The app is still under development, and some of it's features may not be usable. Please bear with us, as we are working to resolve the problems"/>
+
+
+   <!-- <com.inmobi.ads.InMobiBanner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad1"
+android:layout_alignParentBottom="true"
+        ads:placementId="1595370046376"
+        ads:refreshInterval="60"
+        />-->
+
+
+   <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewMentee"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_mentee"
+       />
+
+
+
+</RelativeLayout>

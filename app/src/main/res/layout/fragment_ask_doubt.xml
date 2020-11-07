@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".AskDoubtFragment"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Title"
+        android:textSize="20sp"
+        android:id="@+id/title_doubt">
+    </EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_images_to_ask"
+        android:text="Select Images To Upload"
+        android:layout_below="@+id/subject_doubt"
+        android:layout_margin="20dp">
+    </Button>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description_doubt"
+        android:textSize="20sp"
+        android:hint="Please Explain Your Problem Here"
+        android:layout_below="@id/select_images_to_ask"
+        android:layout_margin="20dp"
+        android:inputType="textMultiLine">
+    </EditText>
+
+
+    <Button
+        android:id="@+id/submit_doubt_button"
+        android:textSize="20sp"
+        android:text="Ask Doubt"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description_doubt"
+        >
+    </Button>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/title_doubt"
+        android:id="@+id/subject_doubt"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhysicsDoubt"
+            android:text="Physics"
+            android:checked="true"
+            ></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ChemistryDoubt"
+            android:text="Chemistry"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MathsDoubt"
+            android:text="Maths"></RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/OtherDoubts"
+            android:text="Others"></RadioButton>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/submit_doubt_button"
+        android:text="Please Click on the Ask Doubt Button in bottom navigation before asking another doubt or select another image to upload \n So , after you ask a doubt you can view it in Previously Asked Doubts and as soon as its status changes to solving you can interact with the doubt solver by clicking on the doubt."
+/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewAskDoubt"
+       android:layout_below="@+id/txtv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_ask_doubt"
+        ads:layout_constraintTop_toBottomOf="@+id/maths"></com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>

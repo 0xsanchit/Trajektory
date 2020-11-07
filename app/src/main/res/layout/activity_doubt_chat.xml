@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context=".DoubtChatActivity">
+
+    <include
+        android:id="@+id/chat_toolbar"
+        layout="@layout/app_bar_layout"
+        >
+
+    </include>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewChat1"
+        android:layout_below="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_chat"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/adViewChat1"
+        android:id="@+id/ll"
+        android:gravity="center">
+
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="View Doubt"
+    android:id="@+id/view_doubt_button"
+    android:layout_margin="1dp">
+
+</Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark As Solved"
+            android:id="@+id/mark_as_solved_button"
+            android:layout_margin="1dp">
+
+        </Button>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_messages_list_of_users1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        android:layout_above="@+id/chat_linear_layout1"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_linear_layout1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/background_light"
+        >
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/send_files_btn1"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/send_files"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="@android:color/white"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_message1"
+            android:hint="type message here ..."
+            android:padding="15dp"
+            android:maxLines="5"
+            android:layout_toEndOf="@+id/send_files_btn1"
+            android:layout_toStartOf="@+id/send_message_btn1"
+            android:layout_toRightOf="@+id/send_files_btn1"
+            android:layout_toLeftOf="@+id/send_message_btn1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/send_message_btn1"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/send_message"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@android:color/white"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
